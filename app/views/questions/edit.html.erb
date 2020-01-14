@@ -1,0 +1,9 @@
+<h1>Edit question:</h1>
+
+<%= form_for [@survey, @question] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :answer %>
+  <%= f.text_area :answer %>
+  <p><%= f.submit %></p>
+<% end %>
