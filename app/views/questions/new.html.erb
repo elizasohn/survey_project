@@ -1,9 +1,9 @@
 <h1>New question:</h1>
 
 <%= form_for [@survey, @question] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :answer %>
-  <%= f.text_area :answer %>
+  <%= f.label :query %>
+  <%= f.text_field :query %>
+  <%= f.label :response %>
+  <%= f.text_area :response %>
   <p><%= f.submit %></p>
 <% end %>

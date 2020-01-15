@@ -6,7 +6,7 @@
   <% @survey.questions.each do |question| %>
     <ul>
       <li>
-        <%= link_to question.name, survey_question_path(@survey, question) %>
+        <%= link_to question.query, survey_question_path(@survey, question) %>
       </li>
     </ul>
   <% end %>

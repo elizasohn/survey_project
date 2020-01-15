@@ -1,6 +1,8 @@
-<h1>Question: <%= @question.name %></h1>
+<h1>Question: <%= @question.query %></h1>
 <h2>Survey: <%= @survey.name %></h2>
-<h3><%= @question.answer %></h3>
+<h3><%= @question.query %></h3>
+<h3><%= @question.response %></h3>
+
 
 <p><%= link_to "Edit question", edit_survey_question_path(@survey, @question) %></p>
 <p><%= link_to "Delete question", survey_question_path(@survey, @question),

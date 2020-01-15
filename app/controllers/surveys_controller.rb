@@ -1,7 +1,7 @@
 class SurveysController < ApplicationController
 
   def index
-    @survey = Survey.all
+    @surveys = Survey.all
     render :index
   end
 
@@ -20,17 +20,18 @@ class SurveysController < ApplicationController
   end
 
   def edit
-    @survey = Survey.find(params[:id])
+    @survey = Survey.find(params[:id].to_i)
     render :edit
   end
 
   def show
-    @survey = Survey.find(params[:id])
+    # binding.pry
+    @survey = Survey.find(params[:id].to_i)
     render :show
   end
 
   def update
-    @survey = Survey.find(params[:id])
+    @survey = Survey.find(params[:id].to_i)
     if @survey.update(survey_params)
       redirect_to surveys_path
     else
@@ -39,9 +40,9 @@ class SurveysController < ApplicationController
   end
 
   def destroy
-    @survey = Survey.find(params[:id])
+    @survey = Survey.find(params[:id].to_i)
     @survey.destroy
-    redirect_to albums_path
+    redirect_to surveys_path
   end
 
   private
